@@ -53,11 +53,11 @@ function priceCheck(coins){
   if (btc && ltc && usd && rank && lite && bit){
     return {
       rank,
-      btc,
-      ltc,
-      usd,
-      lite: (lite * ltc).toFixed(2),
-      bit: (bit * btc).toFixed(2)
+      btc: btc + " BTC",
+      ltc: ltc + " LTC",
+      usd: usd.toFixed(2) + " USD",
+      bit: (bit * btc).toFixed(2) + " USD",
+      lite: (lite * ltc).toFixed(2) + " USD"
     };
   }
 }
